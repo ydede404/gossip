@@ -1,0 +1,9 @@
+<h1>Liste des ragots</h1>
+
+   <% @ragots.each do |ragot| %>
+    <tr>
+      <td><%= ragot.content %></td>
+      <td><%= ragot.timestamp %></td>
+      <td><%= link_to "Delete", ragot_path %></td>   
+    </tr>
+  <% end %>

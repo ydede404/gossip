@@ -9,6 +9,23 @@
   </head>
 
   <body>
+  	<header>
+  	<ul>
+<% if corsair_signed_in? %>
+<li>
+<%= link_to "J'ai un Ragot",  new_ragot_path %>
+<%= link_to "Sign Out",  destroy_corsair_session_path, method: :delete %>
+</li>
+<% else %>
+<li>
+<%= link_to "Sign In",  new_corsair_session_path %>
+</li>
+<li>
+<%= link_to "Sign Up",  new_corsair_registration_path %>
+</li>
+<% end %>
+</ul>
+  	</header>
     <%= yield %>
   </body>
 </html>

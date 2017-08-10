@@ -1,0 +1,11 @@
+<h1>Ragots#new</h1>
+<p>Find me in app/views/ragots/new.html.erb</p>
+
+
+<div class="row">
+<%= form_for(@ragot) do |f| %>
+  <%= f.label :content %>
+  <%= f.text_field :content %>
+  <%= f.submit "Envoyer le ragot", class: "btn btn-primary" %>
+<% end %>
+</div>
